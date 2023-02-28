@@ -1,0 +1,44 @@
+.reaction {
+  display: flex;
+  font-size: 13px;
+  font-family: "Manrope-Light";
+  line-height: 15px;
+  color: $color-reaction;
+}
+
+.reaction__hover-block {
+  display: none;
+  position: relative;
+}
+
+.reaction__link {
+  @include link-reset();
+  display: block;
+  margin-right: 15px;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #777f88;
+  }
+
+  &--wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: -15px;
+
+    &:hover .reaction__hover-block {
+      display: block;
+    }
+  }
+}
+
+.reaction__svg {
+  display: block;
+  opacity: 0.5;
+}
+
+.reaction__count {
+  margin-left: 3px;
+}

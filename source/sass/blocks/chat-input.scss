@@ -1,0 +1,87 @@
+.chat-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.chat-input__wrapper-img {
+  position: relative;
+  align-self: flex-start;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 2px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $bg-user;
+  }
+}
+
+.chat-input__img {
+  width: 50px;
+  height: 60px;
+  position: relative;
+}
+
+.chat-input__input-container {
+  position: relative;
+  width: 100%;
+}
+
+.chat-input__input {
+  min-height: 180px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 14px;
+
+  vertical-align: top;
+  white-space: pre-wrap;
+  resize: none;
+  overflow-y: hidden;
+}
+
+.chat-input__input:focus {
+  outline: none;
+}
+
+.chat-input__input::placeholder {
+  color: #999;
+}
+
+.chat-input__wrap {
+  width: 100%;
+  margin-left: 10px;
+}
+
+.chat-input__button-wrap {
+  display: flex;
+  margin-top: 15px;
+}
+
+.chat-input__button {
+  @include button();
+  background-color: #3bc8f5;
+  color: $white;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 5px;
+
+  &--add {
+    margin-right: 20px;
+    &:hover {
+      background-color: #3eddff;
+    }
+  }
+
+  &--remove {
+    background-color: inherit;
+    color: $color-header;
+  }
+}

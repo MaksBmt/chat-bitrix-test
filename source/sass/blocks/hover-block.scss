@@ -1,0 +1,64 @@
+.hover-block {
+  position: absolute;
+  min-width: 180px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+
+  bottom: 12px;
+
+  padding: 15px;
+  font-size: 13px;
+  font-family: "Manrope-Regular";
+  line-height: 18px;
+  color: #828b95;
+  z-index: 500;
+}
+
+.hover-block__title {
+  margin-top: 0;
+  font-size: 15px;
+  line-height: 28px;
+  border-bottom: 1px solid #828b95;
+}
+
+.hover-block__list {
+  @include list-reset();
+}
+
+.hover-block__item {
+  margin-top: 8px;
+}
+
+.hover-block__img {
+  z-index: 500;
+  width: 30px;
+  height: 30px;
+}
+
+.hover-block__link {
+  @include link-reset();
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $bg-user;
+  }
+}
+
+.hover-block__img {
+  display: block;
+  margin-right: 10px;
+}
+
+.hover-block__name {
+  padding-top: 5px;
+}
